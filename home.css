@@ -49,15 +49,34 @@ header{
     position:fixed;
     top:0;
     left:0;
+    right:0;
     width:100%;
-    background:rgba(255, 255, 255, 0.95);
-    backdrop-filter:blur(10px);
+
+    min-height:90px;
+    padding:15px 40px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 8%;
+
+    box-sizing:border-box;
+
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+
     box-shadow:0 5px 15px rgba(0,0,0,.08);
-    z-index:999;
+
+    z-index:1000;
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+}
+
+header.hide{
+    opacity:0;
+    transform:scale(.98);
+    pointer-events:none;
 }
 
 /*==========================

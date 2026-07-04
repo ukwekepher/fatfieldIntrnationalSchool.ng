@@ -254,4 +254,16 @@ HERO VIDEO
 
     text-decoration:none;
 
+} 
+.left-panel{
+    transition:
+        opacity .2s ease,
+        transform .1s ease;
+}
+
+/* Hide left panel */
+.left-panel.hide{
+    opacity:0;
+    transform:translateX(-15px);
+    pointer-events:none;
 }
